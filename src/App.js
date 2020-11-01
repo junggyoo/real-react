@@ -1,15 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
+import User from "./User";
 
 export default function App() {
-  const inputRef = useRef();
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
-
   return (
     <div>
-      <input type="text" ref={inputRef} />
-      <button>저장</button>
+      <p>실전 리액트</p>
+      <User onChangeTitle={() => {}} male={true} type={"gold"} />
     </div>
   );
 }
